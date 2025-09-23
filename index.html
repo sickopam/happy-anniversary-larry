@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What if on your special day you turn into a snake?</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
+  <meta name="description" content="A classic snake game with custom images.">
+
+  <meta property="og:title" content="Snake Game">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/ichigo.png" sizes="any">
+  <link rel="icon" href="/ichigo.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body>
+  <div id="loading">
+    <h1 id="press">loading...</h1>
+  </div>
+  <audio id="bgm" loop src="img/bgm.wav"></audio>
+  <audio id="sfx" src="img/sfx.m4a"></audio>
+  <div id="gameOverScreen">
+    <audio id="nuu" src="img/nuu.m4a"></audio>
+    <button id="continueButton">KEEP GOING BABY!!</button>
+  </div>
+  
+  
+  <div id="game-container">
+    <canvas id="game" width="1152" height="768"></canvas>
+    <div id="secret-letta"></div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-storage-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/slith.js"></script>
+  </body>
+
+</html>
