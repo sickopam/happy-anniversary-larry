@@ -13,16 +13,9 @@ const continueButton = document.getElementById('continueButton');
 // This object will store the position of our on-canvas "Play Again?" button
 let restartButtonBounds = {};
 
-const secretMessage = `To my most beautifully special girl,
-
-I've been searching for the right words to congratulate you on your gala. I thought, what better way to do so by sounding like I'm directly speaking to you.
-
-Watching you through all the time we spent together and separated shows your genuinity and purity as you tend to see things on the brighter side. You never lost your lilgil demeanor, yet you know how to act accordingly. Most importantly you know how to express yourself at the perfect time, shooting an arrow despite the wind directly to my heart.
-
-Youre approaching the age of exposure and realization, there will be a lot to learn. Dont ever let go of your routine, your passion, stay creative and curious. Every step you take will lead you somewhere so if you ever feel stuck, there's always a way. Keep inspiring yourself everyday and cut the doomscrolling lilgil.
-
-I pray God bless you with all you wish, including me :p
-I will always love you, Happy Birthday.`;
+const secretMessage = `To my sweet Kevin, 
+I love you so much, but I don’t think words can honestly describe how much I love you. Thank you for everything you’ve done for me, from the big things to the little; I noticed them all. I miss you so much, and I can’t wait till the day I get to see you again. I love every moment we spend together, whether it’s pointless laughter on the phone or our silly drives around the city; you never fail to make me laugh stupid. 
+Anyways happy anniversary my heart, I love you forever and always<3`;
 
 const secretWords = secretMessage.trim().replace(/\n/g, ' <br> ').split(/ +/).filter(Boolean);
 let wordsRevealed = 0;
@@ -34,7 +27,7 @@ const cols = canvas.width / grid;
 const rows = canvas.height / grid;
 
 var loadedAppleImages = [];
-const imageFolderPath = 'bless/';
+const imageFolderPath = 'kevin/';
 
 var snake = {
     x: grid * Math.floor(cols / 2),
@@ -142,7 +135,7 @@ function renderGame() {
         else if (snake.dx < 0) angle = Math.PI / 2;
         else if (snake.dy > 0) angle = 0;
         context.rotate(angle);
-        context.fillStyle = "hotpink";
+        context.fillStyle = "red";
         drawHeart(-grid / 2, -grid / 2, grid, grid);
         context.restore();
     }
@@ -233,7 +226,7 @@ function drawEndGameText() {
     context.textAlign = 'center';
     context.shadowColor = 'rgba(0,0,0,0.5)';
     context.shadowBlur = 5;
-    context.fillText('love blessy, from pami', canvas.width / 2, canvas.height - 120);
+    context.fillText('kisses miles away<3 ~rhea', canvas.width / 2, canvas.height - 120);
     context.shadowBlur = 0; // Reset shadow
 }
 
@@ -246,7 +239,7 @@ function drawRestartButton() {
 
     restartButtonBounds = { x: buttonX, y: buttonY, width: buttonWidth, height: buttonHeight };
 
-    context.fillStyle = 'hotpink';
+    context.fillStyle = 'red';
     context.fillRect(buttonX, buttonY, buttonWidth, buttonHeight);
     
     context.strokeStyle = 'white';
@@ -257,7 +250,7 @@ function drawRestartButton() {
     context.font = '24px "Eden", sans-serif';
     context.textAlign = 'center';
     context.textBaseline = 'middle';
-    context.fillText('again lilgil?', canvas.width / 2, buttonY + buttonHeight / 2);
+    context.fillText('again?', canvas.width / 2, buttonY + buttonHeight / 2);
 }
 
 function drawHeart(x, y, width, height) {
@@ -314,7 +307,7 @@ async function startGame() {
     const urls = await fetchImageUrls();
     loadedAppleImages = await preloadImages(urls);
     advanceToNextApple();
-    loadText.innerHTML = "this lil game contains all my fav pics i have of you, hope you like <3<br>press any button to start";
+    loadText.innerHTML = "<br>this lil game contains all my fav pics i have of you, hope you like <3<br><br>press any button to start<br><br><br>ps. you suck if you fail";
     window.addEventListener("keydown", beginGame, { once: true });
     continueButton.addEventListener('click', continueGame);
     // The HTML restart button is not used, so its listener is removed.
@@ -338,9 +331,8 @@ function preloadImages(urls) {
   const promises = urls.map(url => {
     return new Promise(resolve => {
       const img = new Image();
-      img.crossOrigin = "anonymous";
       img.onload = () => resolve(img);
-      img.onerror = () => resolve(null);
+      img.onerror = () => { console.warn("image failed: ", url); resolve(null);}
       img.src = url;
     });
   });

@@ -7,9 +7,9 @@
   <title>What if on your special day you turn into a snake?</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/app.css">
-  <meta name="description" content="A classic snake game with custom images.">
+  <meta name="description" content="On your gala i made this lil sum for you :&41">
 
-  <meta property="og:title" content="Snake Game">
+  <meta property="og:title" content="Happy Birthday Love">
   <meta property="og:type" content="website">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
@@ -24,15 +24,23 @@
 
 </head>
 
+<script>
+  function setHalfVolume() {
+      var myAudio = document.getElementById("nuu");  
+      myAudio.volume = 0.8; //Changed this to 0.5 or 50% volume since the function is called Set Half Volume ;)
+  }
+
+</script>
+
 <body>
   <div id="loading">
     <h1 id="press">loading...</h1>
   </div>
   <audio id="bgm" loop src="img/bgm.wav"></audio>
-  <audio id="sfx" src="img/sfx.m4a"></audio>
+  <audio id="sfx" src="img/fart.mp3"></audio>
   <div id="gameOverScreen">
-    <audio id="nuu" src="img/nuu.m4a"></audio>
-    <button id="continueButton">KEEP GOING BABY!!</button>
+    <audio id="nuu" src="img/L.mp3" onloadeddata="setHalfVolume()"></audio>
+    <button id="continueButton">BOO, YOU SUCK :p</button>
   </div>
   
   

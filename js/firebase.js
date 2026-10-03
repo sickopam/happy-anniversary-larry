@@ -1,11 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyA-hH-p_WdZfMqCaShV4Fa43QEuTz8WCdY",
-  authDomain: "hbdblessy.firebaseapp.com",
-  projectId: "hbdblessy",
-  storageBucket: "hbdblessy.firebasestorage.app",
-  messagingSenderId: "933074410122",
-  appId: "1:933074410122:web:7f9e9f640fbc5648e6ab73",
-  measurementId: "G-R281081KYF"
+  apiKey: "AIzaSyA5wpTKnwnwSSnf6QtC8wNX1jbxxOOFZLM",
+  authDomain: "foryourlove-a3347.firebaseapp.com",
+  projectId: "foryourlove-a3347",
+  storageBucket: "foryourlove-a3347.firebasestorage.app",
+  messagingSenderId: "352861373593",
+  appId: "1:352861373593:web:e56626b1d820fe5b256408"
 };
 
 firebase.initializeApp(firebaseConfig);
