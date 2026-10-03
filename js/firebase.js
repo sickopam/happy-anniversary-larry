@@ -8,6 +8,4 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-
-// This line creates the 'storage' variable that slith.js needs
 const storage = firebase.storage();
