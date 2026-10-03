@@ -19,6 +19,7 @@ module.exports = merge(common, {
         { from: 'img', to: 'img', noErrorOnMissing: true },
         { from: 'css', to: 'css', noErrorOnMissing: true },
         { from: 'js/vendor', to: 'js/vendor', noErrorOnMissing: true },
+        { from: 'ichigo.png', to: 'ichigo.png' },
         { from: 'icon.svg', to: 'icon.svg', noErrorOnMissing: true },
         { from: 'favicon.ico', to: 'favicon.ico', noErrorOnMissing: true },
         { from: 'robots.txt', to: 'robots.txt', noErrorOnMissing: true },
