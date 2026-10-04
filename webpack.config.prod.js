@@ -16,6 +16,8 @@ module.exports = merge(common, {
 
     new CopyPlugin({
       patterns: [
+        { from: 'js/firebase.js', to: 'js/firebase.js' },
+        { from: 'js/slith.js', to: 'js/slith.js' },
         { from: 'img', to: 'img', noErrorOnMissing: true },
         { from: 'css', to: 'css', noErrorOnMissing: true },
         { from: 'js/vendor', to: 'js/vendor', noErrorOnMissing: true },

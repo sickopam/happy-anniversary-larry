@@ -1,0 +1,1 @@
+const firebaseConfig={apiKey:"AIzaSyA5wpTKnwnwSSnf6QtC8wNX1jbxxOOFZLM",authDomain:"foryourlove-a3347.firebaseapp.com",projectId:"foryourlove-a3347",storageBucket:"foryourlove-a3347.firebasestorage.app",messagingSenderId:"352861373593",appId:"1:352861373593:web:e56626b1d820fe5b256408"};firebase.initializeApp(firebaseConfig);const storage=firebase.storage();
